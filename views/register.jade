@@ -1,0 +1,18 @@
+//
+   Created by AntDy11 on 5/11/2016.
+extends layout
+
+block content
+    h1= title
+    p Register for an account on our server
+        form#localLogin(action="/auth/register" method="post")
+            label Username:
+                input#username(name="username")
+            br
+            label Password:
+                input#password(name="password" type="password")
+            br
+            label Confirm password:
+                input#password2(name="password2" type="password")
+            br
+            button Register

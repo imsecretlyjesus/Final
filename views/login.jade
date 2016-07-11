@@ -1,0 +1,20 @@
+//
+   Created by AntDy11 on 5/11/2016.
+
+extends layout
+
+block content
+    h1= title
+    h2= errorMessage
+    p Sign in using your account
+        form#localLogin(action="/login" method="post")
+            label Username:
+                input(name="username")
+            br
+            label Password:
+                input(name="password" type="password")
+            br
+            input(type="submit" value="Log in")
+    p.
+        #[a(href="/login/register") Register]
+        for an account on our chat server

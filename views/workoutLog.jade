@@ -1,0 +1,66 @@
+//
+   Created by AntDy11 on 4/30/2016.
+
+extends layout
+
+main
+
+block content
+    h2 Change Your Rotation: #[a(href='/workoutLog/1') 1], #[a(href='/workoutLog/2') 2], #[a(href='/workoutLog/3') 3], #[a(href='/workoutLog/4') 4], #[a(href='/workoutLog/5') 5], #[a(href='/workoutLog/6') 6], #[a(href='/workoutLog/7') 7]
+    each val in rotation
+        h2= val.rotationName
+    div#wrapper
+        div#exerciseAccordion.accordion
+            h3 Warmup
+            div
+                table
+                    thead
+                        th Exercise Name
+                    tbody
+                        each val in warmup
+                            tr
+                                td= val.exerciseName
+                                td#addButton.ui-button= 'Add'
+            h3 Exercise
+            div
+                table
+                    thead
+                        th Exercise Name
+                    tbody
+                        each val in exercise
+                            tr
+                                td= val.exerciseName
+                                td#addButton.ui-button= 'Add'
+            h3 Burnout
+            div
+                table
+                    thead
+                        th Exercise Name
+                    tbody
+                        each val in burnout
+                            tr
+                                td= val.exerciseName
+                                td#addButton.ui-button= 'Add'
+        div#workouts
+            div#currentWeek.accordion
+                h3 Your Workout
+                div#currentData Data
+            div#lastWeek.accordion
+                h3 Last Workout
+                div
+                    table
+                        thead
+                            th Rotation
+                            th Exercise Name
+                            th Reps
+                            th Weight
+                        tbody
+                            each val in previousWorkout
+                                tr
+                                    td= val.rotationNum
+                                    td= val.exerciseName
+                                    td= val.rep
+                                    td= val.weight
+
+block scripts
+    script(src='/javascripts/workoutLog.js')

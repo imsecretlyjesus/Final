@@ -1,0 +1,95 @@
+html {
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffffff;
+}
+
+a {
+  color: #00B7FF;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px;
+  list-style-type: none;
+}
+nav li {
+  text-align: center;
+  padding: 0.25em 0;
+  margin: 1px;
+  flex-grow: 2;
+  border: solid medium #333333;
+  background-color: #f6a828;
+}
+
+nav li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+
+.accordion {
+  padding-bottom: 1em;
+}
+
+table, tr, td { border: 1px solid black !important;}
+table, th, tr, td { border: 1px solid black !important;}
+td, th {padding: .4em;}
+tr .ui-button {padding: .4em;}
+
+@media (min-width: 600px) {
+  html {
+    background-color: #aaaaaa;
+  }
+
+  body {
+    margin: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.5em;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 2.5em;
+  }
+
+  nav li {
+    margin: 1px;
+  }
+
+  #wrapper {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #exerciseAccordion {
+    width: 35%;
+  }
+
+  #workouts {
+    width: 62%;
+    flex-direction: column;
+  }
+
+  #currentWeek {
+
+  }
+  #lastWeek {
+
+  }
+}

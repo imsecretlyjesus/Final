@@ -1,0 +1,16 @@
+//
+   Created by AntDy11 on 4/30/2016.
+extends layout
+
+block content
+    table#rotationList
+        thead
+            tr: th Rotation List
+        tbody
+            each val in plan
+                tr
+                    td= val.rotationNum
+                    td= val.rotationName
+
+block scripts
+    script(src='/javascripts/rotationList.js')

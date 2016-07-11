@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/jquery/jquery-ui.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav
+      ul
+        li #[a(href='/') Home]
+        li #[a(href='/plan') Plan]
+        li #[a(href='/workoutLog') Workout Log]
+        li #[a(href='/login') Log in]
+    block content
+    script(src='/jquery/external/jquery/jquery.js')
+    script(src='/jquery/jquery-ui.min.js')
+    block scripts
